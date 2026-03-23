@@ -24,5 +24,4 @@ public class CategoryMapper {
             category.getDescription()
         );
     }
-
 }
