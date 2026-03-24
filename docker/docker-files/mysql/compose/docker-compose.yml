@@ -41,16 +41,3 @@ volumes:
   mysql-category-data:
   mysql-product-data:
   mysql-user-data:
-
-  #mysql:
-  #image: mysql:8.0
-  # container_name: mysql-sam-db
-  # restart: always
-  #ports:
-  #   - "3308:3306"
-  #  environment:
-  #    MYSQL_ROOT_PASSWORD: root
-  #   MYSQL_DATABASE: safm_db
-  #  volumes:
-  #   - mysql-data:/var/lib/mysql
-  #   - ../../util/script/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql:ro
