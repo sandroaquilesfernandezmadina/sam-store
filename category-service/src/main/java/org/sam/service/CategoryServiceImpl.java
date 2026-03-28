@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.sam.dto.CategoryRequest;
 import org.sam.dto.CategoryResponse;
 import org.sam.entity.Category;
-import org.sam.exeption.ResourceNotFountExeption;
+import org.sam.exeption.ResourseNotFountExeption;
 import org.sam.mapper.CategoryMapper;
 import org.sam.repository.CategoryRepository;
 import org.springframework.stereotype.Service;
@@ -32,7 +32,7 @@ public class CategoryServiceImpl implements CategoryService{
     public CategoryResponse findById(Long id) {
         Category category = categoryRepository.findById(id)
                 .orElseThrow(()->
-                        new ResourceNotFountExeption("Categoria no encontrado con el id: " + id));
+                        new ResourseNotFountExeption("Categoria no encontrado con el id: " + id));
     return categoryMapper.toResponse(category);
     }
 
@@ -48,7 +48,7 @@ public class CategoryServiceImpl implements CategoryService{
     public CategoryResponse update(Long id, CategoryRequest request) {
         Category category = categoryRepository.findById(id)
                 .orElseThrow(()->
-                        new ResourceNotFountExeption("Categoria no encontrado con el id: " + id));
+                        new ResourseNotFountExeption("Categoria no encontrado con el id: " + id));
 
         category.setName(request.getName());
         category.setDescription(request.getName());

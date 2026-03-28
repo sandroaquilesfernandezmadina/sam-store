@@ -1,7 +1,6 @@
 package org.sam.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,6 +8,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "product")
-public class product {
-
+public class Product {
+    @Id
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+    private Double price;
+    private int stock;
+    private Long categoryId;
 }

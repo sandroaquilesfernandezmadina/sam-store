@@ -1,0 +1,13 @@
+package org.sam;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class ApiGatewaySamStoreApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}
