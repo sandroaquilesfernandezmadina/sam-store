@@ -51,7 +51,7 @@ public class CategoryServiceImpl implements CategoryService{
                         new ResourseNotFountExeption("Categoria no encontrado con el id: " + id));
 
         category.setName(request.getName());
-        category.setDescription(request.getName());
+        category.setDescription(request.getDescription());
 
         Category actualizado = categoryRepository.save(category);
         return categoryMapper.toResponse(actualizado);
